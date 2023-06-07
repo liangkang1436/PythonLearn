@@ -7,14 +7,15 @@ print("------------------------------初始化----------------------------------
 # 空列表
 list_empty = []
 print(list_empty)
+# 直接通过方法创建一个
 list_empty_1 = list()
 print(list_empty_1)
 
 list0 = ["baidu", "alli"]
 print(list0)
 # 列表中的元素可以是不同的类型
-list = ['a', 'b', 'c', 'd', 'e', 'f', 1, 2, 3, 4, 5, 6, 7, 8, 9, True, False]
-print(list)
+list_now = ['a', 'b', 'c', 'd', 'e', 'f', 1, 2, 3, 4, 5, 6, 7, 8, 9, True, False]
+print(list_now)
 # 列表的元素的类型可以是列表，元组，字典，集合
 list_nested = ['a', ['b', 'c', 'd'], ('e', 'f'), {"name": 1, "age": 2}, {3, 4, 5, 6, 7, 8}, 9]
 print(list_nested)
@@ -23,93 +24,93 @@ print(type(list_nested))
 
 print("------------------------------读取元素/子列表----------------------------------")
 # 通过索引访问元素，第一个元素下表为0
-print(list[0])
-print(list[2])
+print(list_now[0])
+print(list_now[2])
 # 从后向前访问元素，最后一个元素为-1
-print(list[-1])
-print(list[-2])
+print(list_now[-1])
+print(list_now[-2])
 # 嵌套列表
 print(list_nested[1][2])
 
 # 截取列表中的元素返回一个新的list
 # 包含左边界，不包含右边界
-print(list[1:2])
-print(list[1:-2])
+print(list_now[1:2])
+print(list_now[1:-2])
 # 左右边界可以不写，
 # 左边界不写默认从第一个元素开始
-print(list[1:])
+print(list_now[1:])
 # 右边界不写默认到最后一个元素
-print(list[:-2])
+print(list_now[:-2])
 # 左右都不写，那就是整个列表
-print(list[:])
+print(list_now[:])
 # 左边界必须在右边界的左边，否则输出空列表
-print(list[-1:-2])
+print(list_now[-1:-2])
 
 # 注意，对截取出来的列表的更新不会影响原来的列表
 # 如果元素是对象，而对对象属性进行更新，可能会同步
-sub_list = list[0:3]
+sub_list = list_now[0:3]
 sub_list[1] = "aaaaa"
 print(sub_list)
-print(list)
+print(list_now)
 
 print("------------------------------列表元素的增删改查----------------------------------")
 # 添加元素
-list.append(45.12)
-print(list)
+list_now.append(45.12)
+print(list_now)
 
 # 在指定位置添加元素
-list.insert(1, '&&')
-print(list)
+list_now.insert(1, '&&')
+print(list_now)
 
 # 直接在列表的末尾追加另一个列表
 list_appeng = ["**", "/", "^^"]
-list.extend(list_appeng)
-print(list)
+list_now.extend(list_appeng)
+print(list_now)
 
 # extend 可以接受其他的数据容器，比如元组，集合，字典
-list.extend(("111","222","333"))
-print(list)
+list_now.extend(("111", "222", "333"))
+print(list_now)
 # 会将字典的key添加到列表中
-list.extend({"a1":"111","b2":"222","c2":"333"})
-print(list)
-list.extend({"qq","ee","ff"})
-print(list)
+list_now.extend({"a1": "111", "b2": "222", "c2": "333"})
+print(list_now)
+list_now.extend({"qq", "ee", "ff"})
+print(list_now)
 
 # 设置指定位置的元素
-list[1] = "ab"
-print(list)
+list_now[1] = "ab"
+print(list_now)
 
 # 获取指定元素的下标
-print(list.index(45.12))
+print(list_now.index(45.12))
 # 如果元素在列表中不存在，会报错
-# ValueError: 100 is not in list
-# print(list.index(100))
+# ValueError: 100 is not in list_now
+# print(list_now.index(100))
 
 # 删除第一个匹配的元素
-list.remove(45.12)
-print(list)
+list_now.remove(45.12)
+print(list_now)
 # 如果元素不存在， remove方法会报错
-# ValueError: list.remove(x): x not in list
-# list.remove(45.12)
-# print(list)
+# ValueError: list_now.remove(x): x not in list_now
+# list_now.remove(45.12)
+# print(list_now)
 
 # 删除最后一个元素并返回
-print(list.pop())
-print(list)
+print(list_now.pop())
+print(list_now)
 # 也可以指定索引删除元素并返回，类似于remove
-print(list.pop(-2))
-print(list)
+print(list_now.pop(-2))
+print(list_now)
 
 # 也可以用 del 命令删除指定索引的元素
-del list[-1]
-print(list)
+del list_now[-1]
+print(list_now)
 
 # 统计某个元素在列表中出现的次数，比如 9 这个元素
-print(list.count(9))
+print(list_now.count(9))
 
 print("------------------------------对列表的整体操作----------------------------------")
 # 列表长度
-print(len(list))
+print(len(list_now))
 
 list_int = [12, 45, 78]
 print(max(list_int))
@@ -117,22 +118,22 @@ print(min(list_int))
 # max 和 min 只能对所有元素类型相同的list进行运算，sort方法也是，否则会报错
 
 # 列表的复制
-list_copy = list.copy()
+list_copy = list_now.copy()
 print(list_copy)
 # 对复制出来的列表的指定索引的更新，不会同步到原来的列表
 # 如果元素是对象，而对对象属性进行更新，可能会同步
 list_copy[0] = 999
 print(list_copy)
-print(list)
+print(list_now)
 
 # 将list倒序
-list.reverse()
-print(list)
-list.reverse()
+list_now.reverse()
+print(list_now)
+list_now.reverse()
 
 # 清除列表中的所有元素
-list.clear()
-print(list)
+list_now.clear()
+print(list_now)
 
 print("------------------------------列表元素的排序----------------------------------")
 # sort 只能对所有元素类型相同的list进行运算，max 和 min 方法也是，否则会报错
@@ -204,3 +205,13 @@ list_ele_list_0 = [['aaa'], ['111'], ['222']]
 list_ele_list_1 = list_ele_list_0.copy()
 print(list_ele_list_1)
 print(operator.eq(list_ele_list_0, list_ele_list_1))
+
+print("------------------------------将别的序列转化为列表----------------------------------")
+# 从元组转化而来
+list_from_tuple = list((12, 23.45))
+print(list_from_tuple)
+list_from_set = list({12, 23.45})
+print(list_from_set)
+# 获取key转化为列表
+list_from_dict = list({"name": "12", "age": "23.45"})
+print(list_from_dict)
