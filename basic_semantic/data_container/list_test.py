@@ -47,11 +47,16 @@ print(list_now[:])
 print(list_now[-1:-2])
 
 # 注意，对截取出来的列表的更新不会影响原来的列表
-# 如果元素是对象，而对对象属性进行更新，可能会同步
 sub_list = list_now[0:3]
 sub_list[1] = "aaaaa"
 print(sub_list)
 print(list_now)
+# 如果元素是对象或者列表，而对对象属或者列表性进行更新，是会同步到原来的列表中的
+list_nested_new = list_nested[0:3]
+list_nested_new[1][1] = "&&&&&&"
+print(list_nested_new)
+print(list_nested)
+
 
 print("------------------------------列表元素的增删改查----------------------------------")
 # 添加元素
@@ -118,13 +123,18 @@ print(min(list_int))
 # max 和 min 只能对所有元素类型相同的list进行运算，sort方法也是，否则会报错
 
 # 列表的复制
+# 浅复制，不是深复制
 list_copy = list_now.copy()
 print(list_copy)
 # 对复制出来的列表的指定索引的更新，不会同步到原来的列表
-# 如果元素是对象，而对对象属性进行更新，可能会同步
 list_copy[0] = 999
 print(list_copy)
 print(list_now)
+# 如果元素是对象或者列表，而对对象属性或者列表进行更新，是会同步到原列表中的
+list_nested_copy = list_nested.copy()
+list_nested_copy[1][1] = "******"
+print(list_nested_copy)
+print(list_nested)
 
 # 将list倒序
 list_now.reverse()
