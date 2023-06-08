@@ -63,8 +63,8 @@ list_now.insert(1, '&&')
 print(list_now)
 
 # 直接在列表的末尾追加另一个列表
-list_appeng = ["**", "/", "^^"]
-list_now.extend(list_appeng)
+list_append = ["**", "/", "^^"]
+list_now.extend(list_append)
 print(list_now)
 
 # extend 可以接受其他的数据容器，比如元组，集合，字典
