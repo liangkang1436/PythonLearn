@@ -186,6 +186,8 @@ print(list_new)
 # 直接通过 in 语句判断元素是否在列表中，类似于 index 方法
 print(3 in list_new)
 print("aaa" in list_new)
+# not in 判断元素是否不在列表中
+print("aaa" not in list_new)
 
 # for-in 循环遍历list
 for i in list_new:

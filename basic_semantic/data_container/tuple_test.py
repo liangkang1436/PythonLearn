@@ -134,6 +134,8 @@ print(tuple_new)
 # 直接通过 in 语句判断元素是否在元组中，类似于 index 方法
 print(3 in tuple_new)
 print("aaa" in tuple_new)
+# not in 判断元素是否不在元组中
+print("aaa" not in tuple_new)
 
 # for-in 循环遍历tuple
 for i in tuple_new:
