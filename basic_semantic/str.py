@@ -3,28 +3,33 @@
 # @date 2023/6/3 14:25
 #
 
-name='tom'
+name = 'tom'
 print(type(name))
 print(name)
-name="tom"
+name = "tom"
 print(name)
-name="""
+name = """
 i am tom
 i like coding
 """
 print(name)
 
 # 转义字符的使用
-name='\'tom\''
+name = '\'tom\''
 print(name)
-name="\"tom\""
+name = "\"tom\""
 print(name)
-name=""""
+name = """"
 "tset"
 i am tom
 i like coding
 \""""
 print(name)
+
+# 不进行转义，直接输出字符串原本的内容
+name_raw = r'\'tom\''
+# 输出 \'tom\'
+print(name_raw)
 
 # 字符串格式化
 # 1、 " %s,%d " % (a1,a2)
@@ -45,9 +50,9 @@ print("my name is %s, my height is %.2f cm" % ("xiaohong", 2.345))
         %6.4f  6代表整个浮点数的长度，包括小数点和小数部分，只有当字符串的长度小于6位才起作用，不足6位空格补足，可以用%04.8使用0补足空格，默认左边补0（右对齐），
         可以通过 - 设置左对齐，左对齐时设置补0是无效的
 '''
-age =18
-name= "xiashuo.xyz"
-salary=45.1265
+age = 18
+name = "xiashuo.xyz"
+salary = 45.1265
 # % 表示：我要占位
 # s 表示：将变量转化成字符串类型放入占位的地方
 introduction = "my name is %s , and i am %s years old , my salary is %s" % (name, age, salary)
@@ -58,7 +63,6 @@ introduction = "my name is %s\nand i am %05d years old\nmy salary is %08.3f" % (
 # 45.1265 被格式化为 0045.127 7是保留三位小数同时四舍五入来的，同时前面两个0是为了补齐8位
 print(introduction)
 print('------------------------------------------------')
-
 
 # 2、'{1},{2}'.format(a1,a2)
 # 1) 顺序填坑：{} 占位符
