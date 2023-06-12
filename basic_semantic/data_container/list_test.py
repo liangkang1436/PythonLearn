@@ -36,6 +36,9 @@ print(list_nested[1][2])
 # 包含左边界，不包含右边界
 print(list_now[1:2])
 print(list_now[1:-2])
+# 指定步长为2
+# 结果的索引从0开始，然后是2，然后是4，以此类推
+print("步长为2", list_now[::2])
 # 左右边界可以不写，
 # 左边界不写默认从第一个元素开始
 print(list_now[1:])
@@ -43,8 +46,16 @@ print(list_now[1:])
 print(list_now[:-2])
 # 左右都不写，那就是整个列表
 print(list_now[:])
-# 左边界必须在右边界的左边，否则输出空列表
+# 当步长大于0的时候左边界必须小于右边界，否则输出空列表
+# 输出不为空
+print(list_now[-2:-1])
+# 输出为空
 print(list_now[-1:-2])
+# 当步长小于0的时候左边界必须大于右边界，否则输出空列表
+# 输出不为空
+print(list_now[3:1:-1])
+# 输出为空
+print(list_now[1:3:-1])
 
 # 列表的倒序操作，跟reverse方法一样
 print(list_now)
@@ -60,6 +71,9 @@ list_nested_new = list_nested[0:3]
 list_nested_new[1][1] = "&&&&&&"
 print(list_nested_new)
 print(list_nested)
+
+# 切片操作是可以连写的，灵活使用的话会非常方便
+print(list_now[:6][::-1][2:])
 
 print("------------------------------列表元素的增删改查----------------------------------")
 # 添加元素
