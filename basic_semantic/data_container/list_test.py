@@ -46,6 +46,10 @@ print(list_now[:])
 # 左边界必须在右边界的左边，否则输出空列表
 print(list_now[-1:-2])
 
+# 列表的倒序操作，跟reverse方法一样
+print(list_now)
+print(list_now[::-1])
+
 # 注意，对截取出来的列表的更新不会影响原来的列表
 sub_list = list_now[0:3]
 sub_list[1] = "aaaaa"
@@ -56,7 +60,6 @@ list_nested_new = list_nested[0:3]
 list_nested_new[1][1] = "&&&&&&"
 print(list_nested_new)
 print(list_nested)
-
 
 print("------------------------------列表元素的增删改查----------------------------------")
 # 添加元素
@@ -136,7 +139,7 @@ list_nested_copy[1][1] = "******"
 print(list_nested_copy)
 print(list_nested)
 
-# 将list倒序
+# 将list倒序，也可以直接通过 [::-1] 实现
 list_now.reverse()
 print(list_now)
 list_now.reverse()
