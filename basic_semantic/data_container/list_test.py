@@ -212,6 +212,12 @@ for i in list_new:
 print()
 print(list_new)
 
+print("------------------------------列表推导式----------------------------------")
+
+list_exp = [x + 2 for x in range(0, 10) if x < 6]
+# 输出 [2, 3, 4, 5, 6, 7]
+print(list_exp)
+
 print("------------------------------列表的比较----------------------------------")
 
 # 导入 operator 模块
@@ -236,11 +242,15 @@ print(list_ele_list_1)
 print(operator.eq(list_ele_list_0, list_ele_list_1))
 
 print("------------------------------将别的序列转化为列表----------------------------------")
+# 从字符串转化而来
+list_from_str = list("abcdefghijklmnopqrstuvwxyz")
+print(list_from_str)
 # 从元组转化而来
 list_from_tuple = list((12, 23.45))
 print(list_from_tuple)
+# 从集合转化而来
 list_from_set = list({12, 23.45})
 print(list_from_set)
-# 获取key转化为列表
+# 从字典转换而来 获取key转化为列表
 list_from_dict = list({"name": "12", "age": "23.45"})
 print(list_from_dict)

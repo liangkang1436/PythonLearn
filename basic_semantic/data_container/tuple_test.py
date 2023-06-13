@@ -162,6 +162,13 @@ for i in tuple_new:
 print()
 print(tuple_new)
 
+print("------------------------------元组推导式----------------------------------")
+
+tuple_exp_generator = (x + 2 for x in range(0, 10) if x < 6)
+tuple_exp = tuple(tuple_exp_generator)
+# 输出 (2, 3, 4, 5, 6, 7)
+print(tuple_exp)
+
 print("------------------------------元组的比较----------------------------------")
 
 # 导入 operator 模块
@@ -185,11 +192,15 @@ tuple_ele_tuple_1 = (('aaa'), ('111'), ('222'))
 print(operator.eq(tuple_ele_tuple_0, tuple_ele_tuple_1))
 
 print("------------------------------将别的序列转化为元组----------------------------------")
+# 从字符串转化而来
+tuple_from_str = tuple("abcdefghijklmnopqrstuvwxyz")
+print(tuple_from_str)
 # 从元组转化而来
 tuple_from_list = tuple([12, 23.45])
 print(tuple_from_list)
+# 从集合转化而来
 tuple_from_set = tuple({12, 23.45})
 print(tuple_from_set)
-# 获取key转化为元组
+# 从字典转换而来 获取key转化为元组
 tuple_from_dict = tuple({"name": "12", "age": "23.45"})
 print(tuple_from_dict)
