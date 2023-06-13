@@ -12,6 +12,9 @@ print("-------")
 
 # 通过range可以获取一个简单的数字序列
 # 从0(包含)开始到10(不包含)
+# 注意，变量类型是 <class 'range'>
+print(type(range(0, 10)))
+# for循环
 for i in range(10):
     print(f"{i}")
 print("-------")
