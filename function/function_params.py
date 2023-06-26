@@ -48,6 +48,15 @@ def add(*num0):
 
 print(add(12, 13, 15))
 
+# 如果参数名以`*`开头的参数后面还有参数，则后面的参数都必须以关键字参数的方式传入
+def test_astrisk_params(a, *b, c):
+    print(a, b, c)
+
+# a 为 a
+# b 为内容为 ('b', 'c', 'd', 'e', 'f', 'f') 的元组
+# c 为 &&  为关键字参数
+print(test_astrisk_params(*"abcdef",c="&&"))
+
 
 # 将传入的多个参数以字典类型保存
 def add_new(**num1):
@@ -69,19 +78,21 @@ def test_asterisk(name, age, *, hobby):
 # test_asterisk("xiashuo", 45, "钓鱼")
 test_asterisk("xiashuo", 45, hobby="钓鱼")
 
-def keywords(*,name,age):
+
+def keywords(*, name, age):
     return print(f"我的名字是：{name},年龄是：{age}")
 
-keywords(name="xiashuo",age=12)
+
+keywords(name="xiashuo", age=12)
 
 
-def positional_arguments(name,age,hobby,/,family):
+def positional_arguments(name, age, hobby, /, family):
     return print(f"我的名字是：{name},年龄是：{age},爱好是{hobby},我的家庭是{family}")
+
 
 # TypeError: positional_arguments() got some positional-only arguments passed as keyword arguments: 'name, age'
 # positional_arguments("钓鱼",age=12, name="xiashuo",family="虾家")
-positional_arguments("xiashuo",12,"钓鱼",family="虾家")
-
+positional_arguments("xiashuo", 12, "钓鱼", family="虾家")
 
 # def f(a, b, /, c, d, *, e, f):
 #     print(a, b, c, d, e, f)
