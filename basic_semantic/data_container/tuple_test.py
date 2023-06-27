@@ -191,7 +191,7 @@ tuple_ele_tuple_0 = (('aaa'), ('111'), ('222'))
 tuple_ele_tuple_1 = (('aaa'), ('111'), ('222'))
 print(operator.eq(tuple_ele_tuple_0, tuple_ele_tuple_1))
 
-print("------------------------------将别的序列转化为元组----------------------------------")
+print("------------------------------将别的容器对象转化为元组----------------------------------")
 # 从字符串转化而来
 tuple_from_str = tuple("abcdefghijklmnopqrstuvwxyz")
 print(tuple_from_str)

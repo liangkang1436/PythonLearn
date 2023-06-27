@@ -51,7 +51,7 @@ print(set_now)
 # add 方法无法添加列表、字典、集合作为集合中的元素，这个在前面初始化集合的时候就已经学习过了
 set_now.add((1, 2))
 print(set_now)
-# update方法可传入多个序列（可传入多个参数），然后会自动将这些序列中的元素与集合中的元素进行取并集的操作（效果等同于 | 操作符和 union 方法）
+# update方法可传入多个容器对象（可传入多个参数），然后会自动将这些容器对象中的元素与集合中的元素进行取并集的操作（效果等同于 | 操作符和 union 方法）
 # 字典会使用key，不使用value
 # 很明显，update方法更加方便实用
 set_now.update(["aa", "bb", "cc"], (1, 2, 3, 11, 12), {"a1", "b1", "c1"}, {"A1": 94, "B1": 98, "C1": 99})
@@ -191,7 +191,7 @@ print(set_6.symmetric_difference(set_7))
 set_6.symmetric_difference_update(set_7)
 print(set_6)
 
-print("------------------------------将别的序列转化为集合----------------------------------")
+print("------------------------------将别的容器对象转化为集合----------------------------------")
 # 从字符串转化而来
 set_from_str = set("abcdefghijklmnopqrstuvwxyz")
 print(set_from_str)

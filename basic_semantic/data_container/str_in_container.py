@@ -126,7 +126,7 @@ str_str_1 = 'aaa-cccccc-dd-bb'
 print(operator.eq(str_str_0, str_str_0_copy))
 print(operator.eq(str_str_0, str_str_1))
 
-print("------------------------------将别的序列转化为字符串----------------------------------")
+print("------------------------------将别的容器对象转化为字符串----------------------------------")
 # 从列表转化而来
 str_from_list = str([12, 23.45])
 print(str_from_list)

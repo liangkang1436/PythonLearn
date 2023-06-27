@@ -241,7 +241,7 @@ list_ele_list_1 = list_ele_list_0.copy()
 print(list_ele_list_1)
 print(operator.eq(list_ele_list_0, list_ele_list_1))
 
-print("------------------------------将别的序列转化为列表----------------------------------")
+print("------------------------------将别的容器对象转化为列表----------------------------------")
 # 从字符串转化而来
 list_from_str = list("abcdefghijklmnopqrstuvwxyz")
 print(list_from_str)

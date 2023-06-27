@@ -225,10 +225,11 @@ print("aaa" not in dict_new)
 for i in dict_new:
     print(i, dict_new[i], end=' ')
 print()
-# 不存在下面这种写法
-# for k,v in dict_new:
-#     print(k,v, end=' ')
-# print()
+
+# 这样很符合直觉
+for k, v in dict_new.items():
+    print(k, v, end=' ')
+print()
 
 print("------------------------------字典推导式----------------------------------")
 
