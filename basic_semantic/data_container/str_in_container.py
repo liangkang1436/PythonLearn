@@ -129,13 +129,17 @@ print(operator.eq(str_str_0, str_str_1))
 print("------------------------------将别的容器对象转化为字符串----------------------------------")
 # 从列表转化而来
 str_from_list = str([12, 23.45])
+# 输出  "[12, 23.45]"
 print(str_from_list)
 # 从元组转化而来
 str_from_tuple = str((12, 23.45))
+# 输出 "(12, 23.45)"
 print(str_from_tuple)
 # 从集合转化而来
 str_from_set = str({12, 23.45})
+# 输出 "{12, 23.45}"
 print(str_from_set)
 # 从字典转化而来
 str_from_dict = str({"name": "12", "age": "23.45"})
+# 输出 "{'name': '12', 'age': '23.45'}"
 print(str_from_dict)
