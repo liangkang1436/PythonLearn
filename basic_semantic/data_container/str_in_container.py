@@ -81,6 +81,14 @@ print(max(str_compare))
 # 字符串中的最大值
 print(min(str_compare))
 
+print("------------------------------字符串中的字符的排序----------------------------------")
+
+# 容器通用排序操作，返回一个新的列表，原字符串是不变的，
+# 字符串中的字符类型是str，所以不用考虑多种类型的情况
+sorted_list = sorted(str_now, reverse=False)
+print(str_now)
+print(sorted_list)
+
 print("------------------------------对字符串的符号操作，非常方便----------------------------------")
 str_new = "aaa-bbb-ccc-ddd"
 str_2_plus = "1111-222-333-444-555"

@@ -134,6 +134,29 @@ print(min(tuple_int))
 # # '>' not supported between instances of 'str' and 'int'
 # print(max(tuple_mix))
 
+print("------------------------------元组元素的排序----------------------------------")
+
+
+# 自定义排序规则
+# 根据元素长度
+def eleLen(elem):
+    # 相当于一个hash操作
+    # 返回值越大，升序排序的时候就越靠后
+    if type(elem) == bool:
+        return 1
+    elif type(elem) == int:
+        return len(str(elem))
+    else:
+        # 剩下的都是容器了
+        return len(elem)
+
+
+# 容器通用排序操作，返回一个新的列表，原元组是不变的，
+# 元组中的元素的类型是不限定的，因此得定制key函数，否则无法比较，只能返回空列表
+sorted_list = sorted(tuple_now, key=eleLen, reverse=False)
+print(tuple_now)
+print(sorted_list)
+
 
 print("------------------------------对元组的符号操作，非常方便----------------------------------")
 tuple_new = ("aaa", "bbb", "ccc", "ddd")

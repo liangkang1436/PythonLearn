@@ -176,14 +176,28 @@ print(list_num)
 
 
 # 自定义排序规则
-# 根据字符串长度
-def strLen(elem):
-    return len(elem)
+# 根据元素长度
+def eleLen(elem):
+    # 相当于一个hash操作
+    # 返回值越大，升序排序的时候就越靠后
+    if type(elem) == bool:
+        return 1
+    elif type(elem) == int:
+        return len(str(elem))
+    else:
+        # 剩下的都是容器了
+        return len(elem)
 
 
 str_list = ['aaaaaa', 'aa', 'aaa', 'aaaaaaaaaaaaaaa', 'aaaaaaaaa']
-str_list.sort(key=strLen, reverse=False)
+str_list.sort(key=eleLen, reverse=False)
 print(str_list)
+
+# 容器通用排序操作，返回一个新的列表，原字典是不变的，
+# list中的元素的类型是不限定的，因此得定制key函数，否则无法比较，只能返回空列表
+sorted_list = sorted(list_copy, key=eleLen, reverse=False)
+print(list_copy)
+print(sorted_list)
 
 print("------------------------------对列表的符号操作，非常方便----------------------------------")
 list_new = ["aaa", "bbb", "ccc", "ddd"]

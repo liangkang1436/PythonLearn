@@ -209,6 +209,29 @@ val_of_dict = dict_now.values()
 # 类型为 dict_values
 print(val_of_dict, type(val_of_dict))
 
+print("------------------------------字典元素的排序----------------------------------")
+
+
+# 自定义排序规则
+# 根据元素长度
+def eleLen(elem):
+    # 相当于一个hash操作
+    # 返回值越大，升序排序的时候就越靠后
+    if type(elem) == bool:
+        return 1
+    elif type(elem) == int:
+        return len(str(elem))
+    else:
+        # 剩下的都是容器了
+        return len(elem)
+
+
+# 容器通用排序操作，返回一个新的列表，原字典是不变的，
+# 主要是对字典的key进行排序，字典中的key的类型是不限定的，因此得定制key函数，否则无法比较，只能返回空列表
+sorted_list = sorted(dict_now, key=eleLen, reverse=False)
+print(dict_now)
+print(sorted_list)
+
 print("------------------------------对字典的符号操作，非常方便----------------------------------")
 # 字典不支持 + 操作
 # 字典不支持 * 操作
