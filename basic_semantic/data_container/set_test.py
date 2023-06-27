@@ -139,6 +139,19 @@ print("------------------------------集合推导式操作----------------------
 set_exp = {x for x in 'abracadabra' if x not in 'abc'}
 print(set_exp)
 
+print("------------------------------集合的比较----------------------------------")
+
+# 导入 operator 模块
+import operator
+
+a = {1, 2}
+b = {2, 1}
+c = (2, 3)
+# True
+print("operator.eq(a,b): ", operator.eq(a, b))
+# False
+print("operator.eq(c,b): ", operator.eq(c, b))
+
 print("------------------------------集合的相关方法----------------------------------")
 
 set_3 = {"a1", "b1", "c1"}
@@ -191,5 +204,3 @@ print(set_from_tuple)
 # 从字典转换而来 获取key转化为列表
 set_from_dict = set({"name": "12", "age": "23.45"})
 print(set_from_dict)
-
-
