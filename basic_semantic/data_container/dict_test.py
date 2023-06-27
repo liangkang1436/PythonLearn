@@ -258,3 +258,17 @@ dict_c = {1: 2, 2: 2}
 print("operator.eq(a,b): ", operator.eq(dict_a, dict_b))
 print("operator.eq(c,b): ", operator.eq(dict_a, dict_c))
 # 复杂的比较就懒得比较了
+
+print("------------------------------将别的容器对象转化为字典----------------------------------")
+# 从列表转化而来
+dict_from_list = dict.fromkeys([12, 23.45])
+print(dict_from_list)
+# 从字符串转化而来
+dict_from_str = dict.fromkeys("abcdefg")
+print(dict_from_str)
+# 从元组转化而来
+dict_from_tuple = dict.fromkeys((12, 23.45))
+print(dict_from_tuple)
+# 从集合转化而来
+dict_from_set = dict.fromkeys({12, 23.45})
+print(dict_from_set)
