@@ -17,14 +17,15 @@ info(name="xiashuo1212", age=20)
 
 
 ## 参数默认值
-def test_default_params(name="xiashuo.xyz"):
-    print(f"name: {name} ")
+# 带默认值的参数的后面不能存在不带默认值的参数
+def test_default_params(age, name="xiashuo.xyz", *dfad, **kw):
+    print(f"age: {age} name: {name} ")
 
 
 # 默认参数值
-test_default_params()
+test_default_params(10)
 # 指定的参数值
-test_default_params('aaaa')
+test_default_params(20,'aaaa')
 
 
 # 元组类型的参数
@@ -91,6 +92,7 @@ test_double_astrisk_and_astrisk_params(*"abcde", c="fgh", f=13, g=15)
 # a 的值由位置参数直接指定，为 10
 test_double_astrisk_and_astrisk_params(10, *"abcde", c="fgh", f=13, g=15)
 
+
 # 星号 * 后的参数必须用关键字的格式传入, * 前面的不做限制
 def test_asterisk(name, age, *, hobby):
     return print(f"我的名字是：{name},年龄是：{age},爱好是{hobby}")
@@ -99,7 +101,7 @@ def test_asterisk(name, age, *, hobby):
 # TypeError: test_asterisk() takes 2 positional arguments but 3 were given
 # test_asterisk("xiashuo", 45, "钓鱼")
 test_asterisk("xiashuo", 45, hobby="钓鱼")
-test_asterisk(age=60,name="xiashuo2", hobby="钓鱼")
+test_asterisk(age=60, name="xiashuo2", hobby="钓鱼")
 
 
 def keywords(*, name, age):
@@ -107,6 +109,7 @@ def keywords(*, name, age):
 
 
 keywords(name="xiashuo", age=12)
+
 
 # 则斜杠 / 前面的参数必须用位置参数的格式传入，`/`后面的不做要求
 def positional_arguments(name, age, hobby, /, family):
@@ -118,9 +121,11 @@ def positional_arguments(name, age, hobby, /, family):
 positional_arguments("xiashuo", 12, "钓鱼", family="虾家")
 positional_arguments("xiashuo3", 35, "钓鱼", "虾家")
 
+
 # `/` 和 `*` 混合使用，显然，`/` 必须在 `*` 的前面
 def f(a, b, /, c, d, *, e, f):
     print(a, b, c, d, e, f)
+
 
 f(10, 20, 30, d=40, e=50, f=60)
 # f(10, b=20, c=30, d=40, e=50, f=60)   # b 不能使用关键字参数的形式
