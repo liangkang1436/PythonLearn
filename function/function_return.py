@@ -18,10 +18,22 @@ print(sum)
 def test_none():
     pass
 
+
 # var 的值是 None ，类型是 NoneType
 var = test_none()
-print(var,type(var))
+print(var, type(var))
+
 
 def test_none2():
     # 也可以直接返回None
     return None
+
+
+# 实际上还是基于自动解包
+
+def test_multiple_return_val(x, y, z):
+    return x, y, z
+
+
+x, y, z = test_multiple_return_val(100, True, (1,2,3))
+print(x, y, z)
