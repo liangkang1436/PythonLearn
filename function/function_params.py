@@ -25,7 +25,7 @@ def test_default_params(age, name="xiashuo.xyz", *dfad, **kw):
 # 默认参数值
 test_default_params(10)
 # 指定的参数值
-test_default_params(20,'aaaa')
+test_default_params(20, 'aaaa')
 
 
 # 元组类型的参数
@@ -128,5 +128,48 @@ def f(a, b, /, c, d, *, e, f):
 
 
 f(10, 20, 30, d=40, e=50, f=60)
+
+
 # f(10, b=20, c=30, d=40, e=50, f=60)   # b 不能使用关键字参数的形式
 # f(10, 20, 30, 40, 50, f=60)           # e 必须使用关键字参数的形式
+
+
+# 函数式编程，把函数当成参数传递
+# operate未声明类型，可以接收数据，也可以接收函数（类型为function），而且是可以接受任何类型的参数，没有任何限制，这个非常牛逼，这个Java不一样，Java在使用函数类型的参数（lambda表达式）的时候是需要声明类型的（函数式接口）
+# 但是这样，调用方也可能传入一个完全不相关的不满足要求的函数，在传入这个不满足要求的函数的时候不会报错的，所以我们在执行传入的方法的时候完全不能保证传入的方法是不是我们想要的方法，所以最好加上try-except
+def calculate_num(operate, num0, num1, /):
+    # 类型为 function
+    # print(operate,type(operate))
+    result = -1
+    try:
+        result = operate(num0, num1)
+    except :
+        print("calculate_num error")
+    return result
+
+
+def add(num0, num1):
+    return num0 + num1
+
+
+def minus(num0, num1):
+    return num0 - num1
+
+def not_relevent():
+    return "------"
+
+
+
+# 传入加运算
+print(calculate_num(add, 1, 2))
+# 传入减运算
+print(calculate_num(minus, 10, 2))
+# 输出
+# calculate_num error
+# -1
+print(calculate_num(not_relevent, 10, 2))
+
+
+# 传入lambda表达式
+print(calculate_num(lambda num0, num1: num0 * num1, 10, 2))
+print(calculate_num(lambda num0, num1: num0 / num1, 10, 2))
