@@ -176,6 +176,10 @@ func_lambda = lambda num0, num1: num0 * num1
 # 输出 <function <lambda> at 0x000002A3148E9120> <class 'function'>
 print(func_lambda, type(func_lambda))
 
+# 可以省略参数
+no_param = lambda : 1
+print(no_param, type(no_param))
+
 
 # 传入lambda表达式
 # 输出 20
