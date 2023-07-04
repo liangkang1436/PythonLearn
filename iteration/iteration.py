@@ -87,6 +87,7 @@ def countdown(n):
 
 
 # 创建生成器对象
+# 一个生成器对象,也是一个迭代器对象
 generator = countdown(5)
 # 输出 <class 'generator'>
 # 如果不包含yield 关键字,类型为 function
