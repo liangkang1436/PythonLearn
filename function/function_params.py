@@ -170,6 +170,15 @@ print(calculate_num(minus, 10, 2))
 print(calculate_num(not_relevent, 10, 2))
 
 
+# lambda表达式
+# 可以用变量承接，这一点跟Java是一样的，变量类型为 function
+func_lambda = lambda num0, num1: num0 * num1
+# 输出 <function <lambda> at 0x000002A3148E9120> <class 'function'>
+print(func_lambda, type(func_lambda))
+
+
 # 传入lambda表达式
+# 输出 20
 print(calculate_num(lambda num0, num1: num0 * num1, 10, 2))
+# 输出 5.0
 print(calculate_num(lambda num0, num1: num0 / num1, 10, 2))
