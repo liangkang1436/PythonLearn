@@ -90,12 +90,12 @@ print("abcdefg01230".endswith(("123", "abc"), -6, -1))
 # 长度不够，导致匹配不到
 print("0123abcdefg".endswith(("123", "abc"), -2, -1))
 
-# 删除字符串头尾的指定字符，即，删除指定前缀后缀，如果不指定，那就是删除空格
-python_str = "   python   "
+# 删除字符串头尾的指定字符，即，删除指定前缀后缀，如果不指定，那就是删除空格，包括换行符
+python_str = "   python   \n"
 strip_result = python_str.strip()
 # 注意，原字符串是不会变化的，返回的是出来之后的结果
 print(python_str)
-print(strip_result)
+print("去掉前缀后缀："+strip_result)
 # 如果指定了字符串，会按照指定字符串中的所有字符来删除前缀后缀
 # 输出 ython 字符串头部的 aaap 和尾部的 bbb 被删除
 print("aaapythonbbb".strip("abp"))
