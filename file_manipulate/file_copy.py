@@ -3,7 +3,7 @@
 # @date 2023/7/9 10:48
 #
 
-# 文件复制
+# 文本文件复制
 file_source = open("./copy_source.csv", "r", encoding="utf-8")
 file_target = open("./copy_target.csv", "w", encoding="utf-8")
 file_target.write("name,age,score,type\n")
