@@ -14,7 +14,8 @@ file_path = "./test_file.txt"
 file_test = open(file_path, mode="r", encoding="UTF-8")
 # <class '_io.TextIOWrapper'>
 print(type(file_test))
-# 将所有的数据都读取到一个列表中
+# 从当前指针所在位置开始，将后面的所有的数据都读取到一个列表中
+# 每一个元素表示文件中的一行内容
 content_list = file_test.readlines()
 # print(content_list)
 # for 循环遍历
@@ -24,18 +25,32 @@ for line in content_list:
 print()
 # close() 方法用于关闭一个已打开的文件。关闭后的文件不能再进行读写操作， 否则会触发 ValueError 错误。 close() 方法允许调用多次。
 # 当 file 对象，被引用到操作另外一个文件时，Python 会自动关闭之前的 file 对象。 使用 close() 方法关闭文件是一个好的习惯。
+# close在最终关闭文件对象之前，会自动调用flush方法
 # 文件对象最后需要关闭
 file_test.close()
 
-# TODO 自动关闭文件对象
-# with open(file_path) as file_handler:
+print("-----------")
+# 其实可以直接将文件对象拿来循环，感觉是自动调用了文件对象的readlines方法
+# 但是这有一个问题啊，怎么关闭文件对象呢？
+# 此时 文件对象未关闭
+for line in open(file_path, mode="r", encoding="UTF-8"):
+    print(line, end="")
 
+print()
+print("-----------")
+
+# with open 语法，可以自动帮我们关闭文件对象，防止我们忘记
+with open(file_path, mode="r", encoding="UTF-8") as file_handler:
+    content = file_handler.read()
+    print(content, type(content))
+
+print("-----------")
 
 
 # 如果文件比较大，我们可以使用生成器，
 def file_iterator(file_obj):
     while True:
-        # readline() 方法用于从文件读取整行，包括 "\n" 字符。如果指定了一个非负数的参数，则返回指定大小的字节数，包括 "\n" 字符。
+        # readline() 方法用于从文件当前指针所在位置开始读取整行，包括 "\n" 字符。如果指定了一个非负数的参数，则返回指定大小的字节数，包括 "\n" 字符。
         # 已经读取了最后一行之后，在调用此方法，会返回空字符串，并且一直调用，一直返回空字符串
         line_str = file_obj.readline()
         # 空字符串 '' ，作为条件表达式，会被bool()转化为 Boolean，结果为 False
@@ -65,7 +80,7 @@ print("--------------------------------")
 # 常见字符的字节书
 # 一个数字字符算1个字节，
 # 一个字母字符算1个字节，
-# 一个换行符算两个字节
+# 一个换行符算两个字节，在Windows中占两个字节，在Linux中占一个字节
 # 一个中文字符算3个字节,这个跟Java不一样,Java中一个中文字符占用2个字节
 #
 # 文件内容为 Python真棒
@@ -77,7 +92,7 @@ print(char_file.tell())
 # 在不带b的模式下,可以使用seek() 方法,但是 offset 参数必须是 0
 # 回到开头,可以继续读第一行
 char_file.seek(0, 0)
-# read() 方法用于从文件读取指定的字符数（文本模式 t）或字节数（二进制模式 b），如果未给定参数 size 或 size 为负数则读取文件所有内容。默认为 -1
+# read() 方法用于从文件中当前指针所在位置开始读取指定的字符数（文本模式 t）或字节数（二进制模式 b），如果未给定参数 size 或 size 为负数则读取文件所有内容到一个字符串中。size默认为 -1
 # 输出从当前指针开始的6的字符,也就是输出 Python
 print(char_file.read(6))
 char_file.seek(0, 1)
@@ -99,7 +114,7 @@ print("--------------------------------")
 # 文件内容为 Python真棒
 file_path_binary_char = "./char_binary_test.txt"
 char_file = open(file_path_binary_char, mode="rb")
-# rb 模式下，readline方法读出来的是字节，想要展示位字符串，需要解码
+# rb 模式下，readline方法读出来的是字节（但是数字字符和英文字符还是原来的样子，在utf-8或者unicode编码中，字母和数字兼容 ASCII 编码，所以没有编码，编码就是自身），想要展示为字符串，需要解码
 # b'Python\xe7\x9c\x9f\xe6\xa3\x92'
 print(char_file.readline())
 # 输出 12
@@ -124,8 +139,6 @@ print("编码为中文:" + binary_read.decode('utf-8', ))
 # mode为 r 或者r+ 的时候,路径对应的文件必须存在,否则报错
 # mode为 w w+ a a+ 的时候,路径对应的文件可以不存在,不存在的时候会自动创建
 file_path_write = "./write_test.txt"
-# 如果模式为a,则会一直追加
-# file_write = open(file_path_write, mode="a", encoding="UTF-8")
 file_write = open(file_path_write, mode="w", encoding="UTF-8")
 for i in range(0, 10):
     # write() 方法用于向文件中写入指定字符串。
@@ -139,4 +152,39 @@ line_list = ["批量插入1\n", "批量插入2\n", "批量插入3\n", "批量插
 # 换行需要制定换行符 \n。
 file_write.writelines(line_list)
 
+# flush() 方法是用来刷新缓冲区的，即将缓冲区中的数据立刻写入文件，同时清空缓冲区，不需要是被动的等待输出缓冲区写入。
+# 一般情况下，文件关闭后会自动刷新缓冲区，但有时你需要在关闭前刷新它，这时就可以使用 flush() 方法。
+file_write.flush()
+
 file_write.close()
+
+# 缓冲策略
+file_path_write_buffer = "./write_buffer_test.txt"
+# buffering=1 行缓存
+# 如果模式为a,则会一直追加
+file_write_buffer = open(file_path_write_buffer, mode="a", encoding="UTF-8", buffering=1)
+# 使用write()方法写入文件的时候，只要写入的内容中包含换行符`\n`，就相当于在write()方法后调用了一次flush()方法
+file_write_buffer.write("1111")
+file_write_buffer.write("222\n")
+file_write_buffer.write("333")
+file_write_buffer.write("444\n")
+file_write_buffer.write("55555")
+file_write_buffer.write("666\n777777")
+file_write_buffer.write("88888")
+file_write_buffer.flush()
+file_write_buffer.close()
+
+file_path_write_buffer_2 = "./write_buffer_test_2.txt"
+# buffering > 1 的缓存设置
+# 仅在二进制模式下能生效，文本模式下不生效，虽然官方文档没说，但是我测试出来是这样的
+file_write_buffer_2 = open(file_path_write_buffer_2, mode="wb", buffering=3)
+# 超过3个字节的输入，都会直接写入到物理文件中
+file_write_buffer_2.write("我靠".encode("UTF-8"))
+file_write_buffer_2.write("8888".encode("UTF-8"))
+file_write_buffer_2.write("111\n".encode("UTF-8"))
+file_write_buffer_2.flush()
+file_write_buffer_2.close()
+
+# 模式的值
+# ValueError: must have exactly one of create/read/write/append mode
+# file_object_test = open(file_path, mode="rbw", encoding="UTF-8", buffering=1)
