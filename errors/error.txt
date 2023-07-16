@@ -1,0 +1,352 @@
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 96, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 96, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 96, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 96, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 96, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 96, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 96, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 112, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 113, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 114, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 121, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 123, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 124, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 124, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 124, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 124, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 125, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 125, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 125, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 127, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 126, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 131, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 131, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 132, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 133, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "E:\PythonProject\PythonLearn\errors\error_test.py", line 125, in <module>
+    print(f"{12 / 0}")
+ZeroDivisionError: division by zero
