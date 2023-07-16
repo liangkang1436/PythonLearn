@@ -2,6 +2,7 @@
 # @author xiashuo
 # @date 2023/7/9 16:56
 #
+import os
 import sys
 
 a = 10
@@ -182,6 +183,7 @@ def get_file_obj():
 
     file_obj = None
     try:
+        # 文件不存在
         file_obj = open("./test.txt", "r", encoding="utf-8")
         yield file_obj
     except Exception as error:
@@ -190,6 +192,8 @@ def get_file_obj():
         yield empty_file_obj
     finally:
         empty_file_obj.close()
+        # 删除临时文件
+        os.remove(empty_file_name)
         if file_obj != None:
             file_obj.close()
 
