@@ -153,3 +153,19 @@ for i in iter(fibonacci_generator):
     print(i, end=" | ")
 
 print()
+
+
+# yield关键字的简单测试
+# 通过生成器，我们可以把一个方法分成两段运行，第一段是从方法开始到yield 语句，第二段是从yield的下一句到方法末尾，很有意思
+def yield_test():
+    print("yield before")
+    # yield 返回 None
+    yield
+    print("yield after")
+
+
+yield_value = yield_test()
+next(yield_value)
+# 给个默认值，next读取不到值的时候不会爆 StopIteration 错误
+next(yield_value,"end")
+
