@@ -28,7 +28,10 @@ except ZeroDivisionError as error:
 # 你可以把多个异常写到一起，放到一个元组里
 except (RuntimeError, TypeError, NameError) as error:
     print(f"输出 {error}")
-# 你可以在最后保留一个 except 子句省略异常的类型，这样可以用于捕获任意异常
+# 可以捕获所有的异常，这个一般放在最后，这样可以用于捕获任意异常
+except Exception as e:
+    print(e)
+# 上面的except也可以省略异常的类型
 except:
     print("uncaught exception,just raise it")
     # 使用raise语句直接将捕获的异常抛出，甚至都不需要异常的变量名
