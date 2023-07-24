@@ -18,4 +18,17 @@ class Test_Import():
 
 __all__ = ["aaa", "_bb", "test_info", "Test_Import"]
 
+def __dir__():
+    return ["111"]
+
+run_flag = 0
+
+if __name__ == "__main__":
+    run_flag = 1
+    print("i am running by myself")
+else:
+    run_flag = 2
+    print("i am imported")
+
+
 
