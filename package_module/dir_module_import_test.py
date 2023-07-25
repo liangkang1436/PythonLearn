@@ -13,6 +13,8 @@ print(aaa)
 print(test_info)
 
 from test_target import *
+# 重命名的写法
+# from test_target import aaa as aaa1,test_info as test_info2
 
 print(dir())
 # 第一种覆盖
