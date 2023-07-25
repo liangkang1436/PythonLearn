@@ -7,3 +7,5 @@ print("ccc imported")
 __all__ = ["xiashuo"]
 
 name = 'ccc package'
+
+# print(__path__)
