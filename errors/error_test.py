@@ -17,10 +17,10 @@ print("---- try/except ----")
 try:
     print(f"{12 / 0}")
     print("it's ok")
-# 一个 try 语句可能包含多个except子句，分别来处理不同的特定的异常。最多只有一个分支会被执行
+# 一个 try 语句可能包含多个 except 子句，分别来处理不同的特定的异常。最多只有一个分支会被执行
 except ValueError as error:
     print(f"输出 {error}")
-    # 使用raise语句直接将捕获的异常抛出，甚至都不需要异常的变量名
+    # 使用 raise 语句直接将捕获的异常抛出，甚至都不需要异常的变量名
     raise
 except ZeroDivisionError as error:
     print("error occurred")
@@ -31,10 +31,10 @@ except (RuntimeError, TypeError, NameError) as error:
 # 可以捕获所有的异常，这个一般放在最后，这样可以用于捕获任意异常
 except Exception as e:
     print(e)
-# 上面的except也可以省略异常的类型
+# 上面的 except 也可以省略异常的类型
 except:
     print("uncaught exception,just raise it")
-    # 使用raise语句直接将捕获的异常抛出，甚至都不需要异常的变量名
+    # 使用 raise 语句直接将捕获的异常抛出，甚至都不需要异常的变量名
     raise
 
 print("---- over ----")
@@ -50,7 +50,7 @@ except ZeroDivisionError as error:
     print(f"输出 {error}")
 except:
     print("uncaught exception,just raise it")
-    # 使用raise语句直接将捕获的异常抛出，甚至都不需要异常的变量名
+    # 使用 raise 语句直接将捕获的异常抛出，甚至都不需要异常的变量名
     raise
 else:
     print("it's alright")
@@ -67,7 +67,7 @@ except ZeroDivisionError as error:
     print(f"输出 {error}")
 except:
     print("uncaught exception,just raise it")
-    # 使用raise语句直接将捕获的异常抛出，甚至都不需要异常的变量名
+    # 使用 raise 语句直接将捕获的异常抛出，甚至都不需要异常的变量名
     raise
 else:
     print("it's alright")
@@ -76,7 +76,7 @@ finally:
 
 print("---- over ----")
 
-# 如果 try 中的错误没有被except子句拦截，则 finally之后 抛出错误
+# 如果 try 中的错误没有被 except 子句拦截，则 finally 之后 抛出错误
 try:
     # print(f"{12 / 0}")
     print("it's ok")
@@ -89,7 +89,7 @@ print("---- over ----")
 print("---- except return ----")
 
 
-# 通过注释 try-except-else-finally中各个子句的return语句来看看最终生效的是哪个return
+# 通过注释 try-except-else-finally 中各个子句的 return 语句来看看最终生效的是哪个 return
 def try_return():
     print("try_return")
     return 11
@@ -106,7 +106,7 @@ def test_return_in_excetp():
         return 12
     except:
         print("uncaught exception,just raise it")
-        # 使用raise语句直接将捕获的异常抛出，甚至都不需要异常的变量名
+        # 使用 raise 语句直接将捕获的异常抛出，甚至都不需要异常的变量名
         raise
     else:
         print("it's alright")
@@ -120,6 +120,45 @@ def test_return_in_excetp():
 
 
 print(test_return_in_excetp())
+
+print("---- finally 不会修改 return 语句的值 ----")
+
+value = 10
+
+def try_return():
+    print("try_return")
+    return value
+
+
+def test_return_in_excetp():
+    try:
+        # print(f"{12 / 0}")
+        print("it's ok")
+        return try_return()
+    except ZeroDivisionError as error:
+        print("error occurred")
+        print(f"输出 {error}")
+        return 12
+    except:
+        print("uncaught exception,just raise it")
+        # 使用 raise 语句直接将捕获的异常抛出，甚至都不需要异常的变量名
+        raise
+    else:
+        print("it's alright")
+        return 13
+    finally:
+        print("finally action : calculate over ")
+        value = 11
+
+        # return 14
+
+    print("function run")
+    return 20
+
+
+print(test_return_in_excetp())
+
+
 print("---- over ----")
 
 # 输出错误信息到文件中
@@ -148,7 +187,7 @@ class test_keyword_with():
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         print("exit obj")
-        # 通过 exc_type（异常类型）, （exc_val）异常信息 我们可以处理异常信息； exc_tb 异常栈对象
+        # 通过 exc_type（异常类型）, （exc_val）异常信息 我们可以处理异常信息；exc_tb 异常栈对象
         # 类型比较，直接比较即可
         if exc_type is not None:
             # 可以针对特定类型进行处理，比如日志输出
@@ -162,7 +201,7 @@ class test_keyword_with():
 # as 也可以省略，此时 __enter__ 方法可以不返回对象
 with_obj = test_keyword_with()
 with with_obj:
-    # 在这里进行了处理， __exit__ 方法中就不会有异常信息了
+    # 在这里进行了处理，__exit__ 方法中就不会有异常信息了
     try:
         with_obj.do_work()
     except ZeroDivisionError as e:
@@ -190,7 +229,7 @@ def get_file_obj():
         file_obj = open("./test.txt", "r", encoding="utf-8")
         yield file_obj
     except Exception as error:
-        # 可以捕捉到异常并阻止异常的抛出，但是此时我们仍然需要返回空的文件对象给with as语句
+        # 可以捕捉到异常并阻止异常的抛出，但是此时我们仍然需要返回空的文件对象给 with as 语句
         print("文件不存在")
         yield empty_file_obj
     finally:
@@ -210,7 +249,7 @@ print("---- raise ----")
 b = 10
 if b == 10:
     # 手动抛出 ArithmeticError 异常，自定义异常提示信息
-    # raise ArithmeticError(f"b的值不对：{b}")
+    # raise ArithmeticError(f"b 的值不对：{b}")
     # 或者直接抛出类
     # raise ZeroDivisionError
     pass
