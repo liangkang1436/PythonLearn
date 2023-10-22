@@ -9,7 +9,7 @@ import autocorrect_py as autocorrect
 
 # 如果是 0 则表示只在没有设置前言的时候才加上前言，如果是 1 则表示每次执行都更新前言，这会修改文件，使得文件的修改时间更新
 # 如果更新前言，也会同时进行文档格式化
-always_update_front_matter = 1
+always_update_front_matter = 0
 
 def format_files(dirPath):
     for root, dirs, files in os.walk(dirPath):
@@ -32,7 +32,10 @@ def format_files(dirPath):
             has_update = set_front_matter(file_path, ctime, title)
 
             if has_update == 1:
-                # 4. 格式化文件 - 添加必要的空格
+                # 4. 更新图片地址
+                update_image_url(file_path)
+
+                # 5. 格式化文件 - 添加必要的空格
                 format_file(file_path, file_name)
 
         for dir in dirs:
@@ -89,6 +92,18 @@ def set_front_matter(file_path, ctime, title):
     # 不更新前言，返回 0
     return 0
 
+def update_image_url(file_path):
+    # 1. 读取文件
+    f = open(file_path, 'r+', encoding="UTF-8")
+    all_the_lines = f.readlines()
+    # 2. 清空
+    f.seek(0)
+    f.truncate()
+    for line in all_the_lines:
+        # 3. 更新图片地址，写入文件中
+        line = line.replace("![](https://cdn.jsdelivr.net/gh/liangkang1436/image-hosting@main/picgo-images/","![](https://lk-images.oss-cn-beijing.aliyuncs.com/images/")
+        f.write(line)
+    f.close()
 
 def format_file(file_path, file_name):
     f = open(file_path, 'r+', encoding="UTF-8")
