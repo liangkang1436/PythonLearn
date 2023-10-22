@@ -106,6 +106,8 @@ def update_image_url(file_path):
         # 3. 更新图片地址，写入文件中
         line = line.replace("![](https://cdn.jsdelivr.net/gh/liangkang1436/image-hosting@main/picgo-images/",
                             "![](https://lk-images.oss-cn-beijing.aliyuncs.com/images/")
+        line = line.replace("src=\"https://cdn.jsdelivr.net/gh/liangkang1436/image-hosting@main/picgo-images/",
+                            "src=\"https://lk-images.oss-cn-beijing.aliyuncs.com/images/")
         f.write(line)
     f.close()
 
