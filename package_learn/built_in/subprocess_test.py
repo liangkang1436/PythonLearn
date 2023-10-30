@@ -137,6 +137,7 @@ def invoke_rsync():
     # pyinstaller 如果带有 -w 参数，则必须指定 shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT 这一串参数
     process = subprocess.Popen(rsync_command, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                stderr=subprocess.STDOUT)
+    process.wait()
 
 
 if __name__ == '__main__':
