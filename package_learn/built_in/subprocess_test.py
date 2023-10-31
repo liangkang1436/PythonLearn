@@ -137,7 +137,7 @@ def invoke_rsync():
     # pyinstaller 如果带有 -w 参数，则必须指定 shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT 这一串参数
     process = subprocess.Popen(rsync_command, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                stderr=subprocess.STDOUT)
-    process.wait()
+    # process.wait()
 
 
 if __name__ == '__main__':
@@ -146,6 +146,6 @@ if __name__ == '__main__':
     # 1. 递归格式化当前目录下所有的 md 文件
     format_files(current_path)
     # 2. 重新生成博客
-    generate_blog(True)
+    generate_blog(False)
     # 3. 同步到阿里云
     invoke_rsync()
